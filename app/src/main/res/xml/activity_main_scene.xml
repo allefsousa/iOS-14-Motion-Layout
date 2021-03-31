@@ -1,100 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
-<MotionScene 
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:motion="http://schemas.android.com/apk/res-auto">
 
     <Transition
-        motion:motionInterpolator="easeInOut"
         motion:constraintSetEnd="@+id/end"
         motion:constraintSetStart="@id/start"
-        motion:duration="2000">
+        motion:duration="1500">
         <KeyFrameSet>
             <KeyAttribute
-                motion:framePosition="0"
-                motion:motionTarget="@id/phone"
-                android:scaleX="0.2"
-                android:scaleY="0.2"
-                android:alpha="0.0"
-                />
-            <KeyAttribute
+                android:scaleX="2.0"
+                android:scaleY="2.0"
                 motion:framePosition="50"
-                motion:motionTarget="@id/phone"
-                android:scaleX="0.5"
-                android:scaleY="0.5"
-                android:alpha="0.5"
-                />
+                motion:motionTarget="@id/phone" />
             <KeyAttribute
-                motion:framePosition="100"
-                motion:motionTarget="@id/phone"
                 android:scaleX="1.0"
                 android:scaleY="1.0"
-                android:alpha="1.0"
-                />
+                motion:framePosition="100"
+                motion:motionTarget="@id/phone" />
         </KeyFrameSet>
         <KeyFrameSet>
             <KeyAttribute
-                motion:framePosition="0"
-                motion:motionTarget="@id/front"
+                android:alpha="1.0"
                 android:scaleX="1.0"
                 android:scaleY="1.0"
-                android:alpha="1.0"
-                />
+                motion:framePosition="0"
+                motion:motionTarget="@id/front" />
             <KeyAttribute
-                motion:framePosition="50"
-                motion:motionTarget="@id/front"
+                android:alpha="0.5"
                 android:scaleX="0.5"
                 android:scaleY="0.5"
-                android:alpha="0.5"
-                />
+                motion:framePosition="50"
+                motion:motionTarget="@id/front" />
             <KeyAttribute
-                motion:framePosition="100"
-                motion:motionTarget="@id/front"
+                android:alpha="0.0"
                 android:scaleX="0.2"
                 android:scaleY="0.2"
-                android:alpha="0.0"
-                />
+                motion:framePosition="70"
+                motion:motionTarget="@id/front" />
         </KeyFrameSet>
-
-        <OnClick motion:targetId="@+id/front" />
     </Transition>
 
     <ConstraintSet android:id="@+id/start">
         <Constraint
-            android:layout_height="match_parent"
-            android:layout_width="match_parent"
             android:id="@+id/front"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:src="@drawable/ios_logo"
+            android:translationZ="1dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintLeft_toLeftOf="parent"
+            motion:layout_constraintRight_toRightOf="parent"
             motion:layout_constraintStart_toStartOf="parent"
-            motion:layout_constraintEnd_toEndOf="parent"
             motion:layout_constraintTop_toTopOf="parent"
-            motion:layout_constraintBottom_toBottomOf="parent" />
+            motion:layout_constraintVertical_bias="0.48" />
+
         <Constraint
-            android:layout_height="match_parent"
-            android:layout_width="match_parent"
             android:id="@+id/phone"
-            android:alpha="0.0"
-            motion:layout_constraintStart_toEndOf="@+id/front"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleX="2.0"
+            android:scaleY="2.0"
+            android:src="@drawable/iphonexr"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintLeft_toLeftOf="parent"
+            motion:layout_constraintRight_toRightOf="parent"
             motion:layout_constraintTop_toTopOf="parent"
-            motion:layout_constraintEnd_toEndOf="parent"
-            motion:layout_constraintBottom_toBottomOf="parent" />
+            motion:layout_constraintVertical_bias="0.0" />
     </ConstraintSet>
 
     <ConstraintSet android:id="@+id/end">
         <Constraint
-            android:layout_height="match_parent"
-            android:layout_width="match_parent"
             android:id="@+id/front"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
             android:alpha="0.0"
+            android:src="@drawable/ios_logo"
+            android:translationZ="1dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintLeft_toLeftOf="parent"
+            motion:layout_constraintRight_toRightOf="parent"
             motion:layout_constraintStart_toStartOf="parent"
-            motion:layout_constraintEnd_toEndOf="parent"
             motion:layout_constraintTop_toTopOf="parent"
-            motion:layout_constraintBottom_toBottomOf="parent" />
+            motion:layout_constraintVertical_bias="0.48" />
+
         <Constraint
-            android:layout_height="match_parent"
-            android:layout_width="match_parent"
             android:id="@+id/phone"
-            motion:layout_constraintStart_toEndOf="@+id/front"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleX="2.0"
+            android:scaleY="2.0"
+            android:src="@drawable/iphonexr"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintLeft_toLeftOf="parent"
+            motion:layout_constraintRight_toRightOf="parent"
             motion:layout_constraintTop_toTopOf="parent"
-            motion:layout_constraintEnd_toEndOf="parent"
-            motion:layout_constraintBottom_toBottomOf="parent" />
+            motion:layout_constraintVertical_bias="0.0" />
     </ConstraintSet>
 </MotionScene>
