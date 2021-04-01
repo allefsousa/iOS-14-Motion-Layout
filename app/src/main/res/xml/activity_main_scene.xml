@@ -38,6 +38,7 @@
                 motion:framePosition="70"
                 motion:motionTarget="@id/front" />
         </KeyFrameSet>
+        <OnClick motion:targetId="@+id/front" />
     </Transition>
 
     <ConstraintSet android:id="@+id/start">
@@ -67,6 +68,82 @@
             motion:layout_constraintRight_toRightOf="parent"
             motion:layout_constraintTop_toTopOf="parent"
             motion:layout_constraintVertical_bias="0.0" />
+        <Constraint
+            android:id="@+id/camera"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:alpha="0.0"
+            android:src="@drawable/ic_camera"
+            android:layout_marginStart="10dp"
+            android:translationZ="1dp"
+            />
+
+        <Constraint
+            android:id="@+id/stocks"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:alpha="0.0"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/ic_stocks"
+            android:translationZ="1dp"
+
+            />
+
+        <Constraint
+            android:id="@+id/clock"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:alpha="0.0"
+            android:src="@drawable/ic_clock"
+            android:translationZ="1dp"
+
+            />
+
+        <Constraint
+            android:id="@+id/tv"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:alpha="0.0"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/ic_tv"
+            android:translationZ="1dp"
+
+            />
+
+        <Constraint
+            android:id="@+id/guide_start"
+            android:layout_width="wrap_content"
+            android:alpha="0.0"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+             />
+
+        <Constraint
+            android:id="@+id/guide_end"
+            android:layout_width="wrap_content"
+            android:alpha="0.0"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+             />
+
+        <Constraint
+            android:id="@+id/guide_top"
+            android:layout_width="wrap_content"
+            android:alpha="0.0"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+             />
+
+        <Constraint
+            android:id="@+id/guide_bottom"
+            android:layout_width="wrap_content"
+            android:alpha="0.0"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            />
     </ConstraintSet>
 
     <ConstraintSet android:id="@+id/end">
@@ -97,5 +174,80 @@
             motion:layout_constraintRight_toRightOf="parent"
             motion:layout_constraintTop_toTopOf="parent"
             motion:layout_constraintVertical_bias="0.0" />
+
+        <Constraint
+            android:id="@+id/camera"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/ic_camera"
+            android:layout_marginStart="10dp"
+            android:translationZ="1dp"
+            motion:layout_constraintTop_toBottomOf="@id/guide_top"
+            motion:layout_constraintStart_toEndOf="@+id/clock"
+            />
+
+        <Constraint
+            android:id="@+id/stocks"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/ic_stocks"
+            android:translationZ="1dp"
+            motion:layout_constraintStart_toEndOf="@+id/tv"
+            motion:layout_constraintTop_toBottomOf="@+id/camera"
+            />
+
+        <Constraint
+            android:id="@+id/clock"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/ic_clock"
+            android:translationZ="1dp"
+            motion:layout_constraintTop_toBottomOf="@+id/guide_top"
+            motion:layout_constraintStart_toEndOf="@id/guide_start"
+            />
+
+        <Constraint
+            android:id="@+id/tv"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/ic_tv"
+            android:translationZ="1dp"
+            motion:layout_constraintStart_toEndOf="@id/guide_start"
+            motion:layout_constraintTop_toBottomOf="@+id/clock"
+            />
+
+        <Constraint
+            android:id="@+id/guide_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            motion:layout_constraintGuide_begin="80dp" />
+
+        <Constraint
+            android:id="@+id/guide_end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            motion:layout_constraintGuide_end="70dp" />
+
+        <Constraint
+            android:id="@+id/guide_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            motion:layout_constraintGuide_begin="110dp" />
+
+        <Constraint
+            android:id="@+id/guide_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            motion:layout_constraintGuide_end="90dp" />
+
     </ConstraintSet>
 </MotionScene>
