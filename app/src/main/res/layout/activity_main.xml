@@ -52,7 +52,7 @@
         android:layout_marginStart="10dp"
         android:layout_marginTop="20dp"
         android:padding="4dp"
-        android:src="@drawable/ic_stocks"
+        android:src="@drawable/ic_bolsa"
         android:translationZ="1dp"
         app:layout_constraintBottom_toTopOf="@+id/barrier_end_one"
         app:layout_constraintEnd_toStartOf="@+id/guide_meio"

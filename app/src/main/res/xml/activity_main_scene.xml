@@ -6,6 +6,51 @@
         motion:constraintSetEnd="@+id/end"
         motion:constraintSetStart="@id/start"
         motion:duration="1500">
+
+        <KeyFrameSet>
+            <KeyAttribute
+                android:scaleX="1.8"
+                android:scaleY="1.8"
+                android:alpha="0.2"
+                motion:framePosition="1"
+                motion:motionTarget="@id/widget_music" />
+            <KeyAttribute
+                android:scaleX="1.7"
+                android:scaleY="1.7"
+                android:alpha="0.4"
+                motion:framePosition="20"
+                motion:motionTarget="@id/widget_music" />
+            <KeyAttribute
+                android:scaleX="1.6"
+                android:scaleY="1.6"
+                android:alpha="0.6"
+                motion:framePosition="30"
+                motion:motionTarget="@id/widget_music" />
+            <KeyAttribute
+                android:scaleX="1.4"
+                android:scaleY="1.4"
+                android:alpha="0.8"
+                motion:framePosition="50"
+                motion:motionTarget="@id/widget_music" />
+            <KeyAttribute
+                android:scaleX="1.2"
+                android:scaleY="1.2"
+                android:alpha="0.9"
+                motion:framePosition="70"
+                motion:motionTarget="@id/widget_music" />
+
+            <KeyAttribute
+                android:scaleX="1.1"
+                android:scaleY="1.1"
+                android:alpha="1.0"
+                motion:framePosition="90"
+                motion:motionTarget="@id/widget_music" />
+            <KeyAttribute
+                android:scaleX="1.0"
+                android:scaleY="1.0"
+                motion:framePosition="100"
+                motion:motionTarget="@id/widget_music" />
+        </KeyFrameSet>
         <KeyFrameSet>
             <KeyAttribute
                 android:scaleX="2.0"
@@ -74,9 +119,10 @@
             android:layout_height="50dp"
             android:layout_marginStart="10dp"
             android:alpha="0.0"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="80dp"
             android:src="@drawable/ic_camera"
-            android:translationZ="1dp"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent"
              />
 
         <Constraint
@@ -87,8 +133,12 @@
             android:layout_marginStart="10dp"
             android:layout_marginTop="20dp"
             android:padding="4dp"
-            android:src="@drawable/ic_stocks"
+            android:src="@drawable/ic_bolsa"
             android:translationZ="1dp"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintVertical_bias="0.425"
             />
 
         <Constraint
@@ -99,18 +149,20 @@
             android:layout_marginTop="20dp"
             android:padding="4dp"
             android:src="@drawable/ic_clock"
-            android:translationZ="1dp"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent"
              />
 
         <Constraint
             android:id="@+id/tv"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="170dp"
             android:alpha="0.0"
             android:padding="4dp"
             android:src="@drawable/ic_tv"
-            android:translationZ="1dp"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent"
            />
 
         <Constraint
@@ -121,73 +173,22 @@
             android:layout_marginTop="20dp"
             android:padding="1dp"
             android:src="@drawable/ic_activity"
-            android:translationZ="1dp" />
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintTop_toTopOf="parent" />
 
-        <Constraint
-            android:id="@+id/guide_start"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:alpha="0.0"
-            android:orientation="vertical"
-            motion:layout_constraintGuide_percent="0.2" />
 
-        <Constraint
-            android:id="@+id/guide_end"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:alpha="0.0"
-            android:orientation="vertical"
-            motion:layout_constraintGuide_percent="0.8" />
-
-        <Constraint
-            android:id="@+id/guide_top"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:alpha="0.0"
-            android:orientation="horizontal"
-            motion:layout_constraintGuide_percent="0.15" />
-
-        <Constraint
-            android:id="@+id/guide_bottom"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:alpha="0.0"
-            android:orientation="horizontal"
-            motion:layout_constraintGuide_end="90dp" />
-
-        <Constraint
-            android:id="@+id/guide_meio"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:alpha="0.0"
-            android:orientation="vertical"
-            motion:layout_constraintGuide_percent="0.5" />
-
-        <Constraint
-            android:id="@+id/barrier_end_one"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:alpha="0.0"
-            motion:barrierDirection="bottom"
-            motion:constraint_referenced_ids="widget_fitness" />
 
         <Constraint
             android:id="@+id/widget_stocks"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="160dp"
             android:alpha="0.0"
             android:padding="1dp"
             android:src="@drawable/ic_stocks"
-            android:translationZ="1dp" />
-
-        <Constraint
-            android:id="@+id/barrier_end_two"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:alpha="0.0"
-            motion:barrierDirection="bottom"
-            motion:constraint_referenced_ids="widget_stocks" />
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent"
+            />
 
 
         <Constraint
@@ -199,7 +200,10 @@
             android:layout_marginTop="10dp"
             android:padding="4dp"
             android:src="@drawable/ic_files"
-            android:translationZ="1dp" />
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintVertical_bias="0.352" />
 
         <Constraint
             android:id="@+id/store"
@@ -209,7 +213,10 @@
             android:padding="4dp"
             android:alpha="0.0"
             android:src="@drawable/ic_app_store"
-            android:translationZ="1dp" />
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintVertical_bias="0.678"/>
 
         <Constraint
             android:id="@+id/mail"
@@ -219,7 +226,11 @@
             android:alpha="0.0"
             android:padding="4dp"
             android:src="@drawable/ic_mail"
-            android:translationZ="1dp" />
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintVertical_bias="0.588"
+             />
 
         <Constraint
             android:id="@+id/clima"
@@ -229,7 +240,10 @@
             android:alpha="0.0"
             android:padding="4dp"
             android:src="@drawable/ic_weather"
-            android:translationZ="1dp" />
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintVertical_bias="0.468" />
 
         <Constraint
             android:id="@+id/widget_music"
@@ -239,14 +253,12 @@
             android:alpha="0.0"
             android:padding="1dp"
             android:src="@drawable/ic_music"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintVertical_bias="0.82"
             android:translationZ="1dp" />
 
-        <Constraint
-            android:id="@+id/barrier_end_three"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            motion:constraint_referenced_ids="widget_music"
-            motion:barrierDirection="bottom" />
 
         <Constraint
             android:id="@+id/saude"
@@ -255,6 +267,10 @@
             android:layout_marginTop="10dp"
             android:alpha="0.0"
             android:padding="4dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintVertical_bias="0.541"
             android:src="@drawable/ic_health"
             android:translationZ="1dp"
             />
@@ -268,6 +284,10 @@
             android:padding="4dp"
             android:src="@drawable/ic_house"
             android:translationZ="1dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintVertical_bias="0.644"
             />
 
         <Constraint
@@ -279,6 +299,9 @@
             android:padding="4dp"
             android:src="@drawable/ic_podcasts"
             android:translationZ="1dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent"
             />
 
         <Constraint
@@ -289,7 +312,10 @@
             android:layout_marginTop="10dp"
             android:padding="4dp"
             android:src="@drawable/ic_photos"
-            android:translationZ="1dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintVertical_bias="0.88"
             />
 
     </ConstraintSet>
